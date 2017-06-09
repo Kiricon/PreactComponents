@@ -4,18 +4,32 @@ import style from './style';
 export default class AsyncImg extends Component {
 
     /**
-     * Change opacity of img tag on image load
-     * @param {Event} e - Event automatically passed by dom
+     * Grow the bottom border of the input field
      */
-	makeImageVisible(e) {
-		let img = e.target;
-	    img.style.opacity='1';
+	growBorder() {
+		let border = this.base.querySelector('div');
+		border.style.width = '99%';
+	}
+
+    /**
+     * Shrink the bottom border of the input field
+     */
+	shrinkBorder() {
+		let border = this.base.querySelector('div');
+		border.style.width = '0%';
 	}
 
 	render() {
 		return (
-            <div {...this.props}>
-                <img {...this.props} onLoad={this.makeImageVisible} class={style.asyncImg} />
+            <div class={style.inputContainer} >
+                <input class={style.paperinput}
+                    {...this.props}
+                    type="text"
+                    onFocus={this.growBorder.bind(this)}
+                    onBlur={this.shrinkBorder.bind(this)}
+                />
+                    
+                <div class={style.borderbottom} />
             </div>
 	    );
 	}
