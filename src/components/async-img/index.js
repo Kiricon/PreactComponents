@@ -3,16 +3,16 @@ import style from './style';
 
 export default class AsyncImg extends Component {
 
-    load() {
-        let img = this.base.querySelector('img');
+	load(e) {
+		let img = e.target;
 	    img.style.opacity='1';
-    }
+	}
 
 	render() {
-    	return (
+		return (
             <div {...this.props}>
-                <img {...this.props} onLoad={this.load.bind(this)} class={style.asyncImg} />
+                <img {...this.props} onLoad={this.load} class={style.asyncImg} />
             </div>
-		);
+	    );
 	}
 }
