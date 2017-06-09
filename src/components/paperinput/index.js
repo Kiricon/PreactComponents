@@ -36,9 +36,8 @@ export default class AsyncImg extends Component {
 
 	render() {
 		return (
-            <div class={style.inputContainer} >
+            <div class={style.inputContainer} {...this.props}  >
                 <input class={style.paperinput}
-	{...this.props}
 	type="text"
 	onFocus={this.growBorder.bind(this)}
 	onBlur={this.shrinkBorder.bind(this)}
