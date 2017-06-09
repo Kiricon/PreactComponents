@@ -9,7 +9,7 @@ export default class Home extends Component {
 			<div class={style.home}>
 				<h1>Home</h1>
 				<p>This is the Home component.</p>
-				<AsyncImg src="assets/icons/android-chrome-192x192.png"/>
+				<AsyncImg src="assets/icons/android-chrome-192x192.png" style="background:grey; height: 100px; width:100px;" />
 			</div>
 		);
 	}
