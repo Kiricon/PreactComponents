@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import style from './style';
+import css from './style';
 
 export default class AsyncImg extends Component {
 
@@ -35,15 +35,16 @@ export default class AsyncImg extends Component {
 	}
 
 	render() {
+        let { style, ...props } = this.props;
 		return (
-            <div class={style.inputContainer} {...this.props}  >
-                <input class={style.paperinput}
+            <div class={css.inputContainer}  style={this.props.style} >
+                <input {...props} class={css.paperinput}
 	type="text"
 	onFocus={this.growBorder.bind(this)}
 	onBlur={this.shrinkBorder.bind(this)}
 	onKeyUp={this.validateInput.bind(this)}
                 />
-                <div class={style.borderbottom} />
+                <div class={css.borderbottom} />
             </div>
 	    );
 	}
