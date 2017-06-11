@@ -29,6 +29,13 @@
   border: solid 1px #eee;
 }
 
+.papercheckbox:focus + label:before {
+  border: solid 1px #03A9F4;
+  width: 18px;
+  height: 18px;
+}
+
+
 .papercheckbox:checked + label.primary:before {
   background: #673AB7;
 }
