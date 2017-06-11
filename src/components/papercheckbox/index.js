@@ -5,7 +5,7 @@ export default class PaperButton extends Component {
 	render() {
 		let { id, checked, ...props } = this.props;
 
-        let checkType = 'normal';
+		let checkType = 'normal';
 
 		if (this.props.primary) {
 			checkType = 'primary';
