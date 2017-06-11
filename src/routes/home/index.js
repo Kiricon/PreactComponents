@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 import style from './style';
 
 import AsyncImg from './../../components/async-img';
-import PaperInput from './../../components/paperinput';
+import { PaperInput, PaperEmailInput } from './../../components/paperinput';
 
 export default class Home extends Component {
 	render() {
@@ -13,6 +13,7 @@ export default class Home extends Component {
 				<AsyncImg src="assets/icons/android-chrome-192x192.png" style="background:grey; height: 100px; width:100px;" />
 				<PaperInput id="firstInput" style="margin:10px; width: 50%;" required />
 				<PaperInput />
+				<PaperEmailInput />
 			</div>
 		);
 	}
