@@ -27,7 +27,10 @@ export default class Home extends Component {
 				<PaperCheckBox style="padding: 10px;" good checked />
 				<PaperCheckBox style="padding: 10px;" warning checked />
 				<PaperCheckBox style="padding: 10px;" danger checked />
-				<SimpleSwitch style="padding: 10px;" />
+				<SimpleSwitch style="padding: 10px;" primary />
+				<SimpleSwitch style="padding: 10px;" good />
+				<SimpleSwitch style="padding: 10px;" warning />
+				<SimpleSwitch style="padding: 10px;" danger />
 			</div>
 		);
 	}

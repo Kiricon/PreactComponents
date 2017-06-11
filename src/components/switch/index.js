@@ -67,10 +67,26 @@ export default class Switch extends Component{
 
 	render() {
 		let { id, name, style } = this.props;
+
+		let checkType = 'normal';
+
+		if (this.props.primary) {
+			checkType = 'primary';
+		}
+		else if (this.props.warning) {
+			checkType = 'warning';
+		}
+		else if (this.props.danger) {
+			checkType = 'danger';
+		}
+		else if (this.props.good) {
+			checkType = 'good';
+		}
+
 		return (
             <label style={style}>
                 <input id={id} name={name} type="checkbox" class={css.switchCheckbox} />
-                <button class={css.switchTrack} tabindex="-1">
+                <button class={css.switchTrack + ' ' + css[checkType]} tabindex="-1">
                     <span class={css.handle} />
                 </button>
             </label>
