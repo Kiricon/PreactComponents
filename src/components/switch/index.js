@@ -3,30 +3,12 @@ import css from './style';
 
 export default class Switch extends Component{
 
-    componentDidMount() {
-        this.checked = false;
-		this.setup();
-    }
+	static get CHECKED_CLASS_NAME() {
+		return css.on;
+	}
 
-    render() {
-        let {id, name, style} = this.props;
-        return (
-            <label style={style}>
-                <input id={id} name={name} type="checkbox" class={css.switchCheckbox} />
-                <button class={css.switchTrack} tabindex="-1">
-                    <span class={css.handle}></span>
-                </button>
-            </label>
-        );
-    }
-
-	setup() {
-
-        this.track = this.base.querySelector('button');
-        this.handle = this.base.querySelector('span');
-        this.element = this.base.querySelector('input');
-
-		this.bind();
+	static get FOCUSED_CLASS_NAME() {
+		return css.focus;
 	}
 
 	bind() {
@@ -69,12 +51,30 @@ export default class Switch extends Component{
 		this.element.checked = this.checked;
 	}
 
-	static get CHECKED_CLASS_NAME() {
-		return css.on;
+	setup() {
+
+		this.track = this.base.querySelector('button');
+		this.handle = this.base.querySelector('span');
+		this.element = this.base.querySelector('input');
+
+		this.bind();
 	}
 
-	static get FOCUSED_CLASS_NAME() {
-		return css.focus;
+	componentDidMount() {
+		this.checked = false;
+		this.setup();
+	}
+
+	render() {
+		let { id, name, style } = this.props;
+		return (
+            <label style={style}>
+                <input id={id} name={name} type="checkbox" class={css.switchCheckbox} />
+                <button class={css.switchTrack} tabindex="-1">
+                    <span class={css.handle} />
+                </button>
+            </label>
+		);
 	}
 
 }
