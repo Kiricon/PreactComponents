@@ -13,7 +13,7 @@ export default class Home extends Component {
 				<AsyncImg src="assets/icons/android-chrome-192x192.png" style="background:grey; height: 100px; width:100px;" />
 				<PaperInput id="firstInput" style="margin:10px; width: 50%;" required />
 				<PaperInput />
-				<PaperEmailInput />
+				<PaperEmailInput placeholder="example@email.com" />
 			</div>
 		);
 	}
