@@ -4,6 +4,7 @@ import style from './style';
 import AsyncImg from './../../components/async-img';
 import { PaperInput, PaperEmailInput, PaperPasswordInput } from './../../components/paperinput';
 import PaperButton from './../../components/paperbutton';
+import PaperCheckBox from './../../components/papercheckbox';
 
 export default class Home extends Component {
 	render() {
@@ -20,6 +21,11 @@ export default class Home extends Component {
 				<PaperButton content="good" good />
 				<PaperButton content="warning" warning />
 				<PaperButton content="danger" danger />
+				<PaperCheckBox style="padding: 10px;" checked />
+				<PaperCheckBox style="padding: 10px;" primary checked />
+				<PaperCheckBox style="padding: 10px;" good checked />
+				<PaperCheckBox style="padding: 10px;" warning checked />
+				<PaperCheckBox style="padding: 10px;" danger checked />
 			</div>
 		);
 	}
