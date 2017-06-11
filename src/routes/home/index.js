@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 import style from './style';
 
 import AsyncImg from './../../components/async-img';
-import { PaperInput, PaperEmailInput } from './../../components/paperinput';
+import { PaperInput, PaperEmailInput, PaperPasswordInput } from './../../components/paperinput';
 
 export default class Home extends Component {
 	render() {
@@ -14,6 +14,7 @@ export default class Home extends Component {
 				<PaperInput id="firstInput" style="margin:10px; width: 50%;" required />
 				<PaperInput />
 				<PaperEmailInput placeholder="example@email.com" />
+				<PaperPasswordInput placeholder="password" />
 			</div>
 		);
 	}

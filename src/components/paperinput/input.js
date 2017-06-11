@@ -3,6 +3,11 @@ import css from './style';
 
 export default class PaperInput extends Component {
 
+	constructor() {
+		super();
+		this.type = 'text';
+	}
+
     /**
      * Grow the bottom border of the input field
      */
@@ -49,7 +54,7 @@ export default class PaperInput extends Component {
 		return (
             <div class={css.inputContainer}  style={style} >
                 <input {...props} class={css.paperinput}
-	type="text"
+	type={this.type}
 	onFocus={this.growBorder.bind(this)}
 	onBlur={this.shrinkBorder.bind(this)}
 	onKeyUp={this.validateInput.bind(this)}
