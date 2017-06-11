@@ -1,0 +1,39 @@
+.paperButton {
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    cursor: pointer;
+    transition: background ease 300ms;
+}
+
+.paperButton:active {
+    box-shadow: none;
+}
+
+.normal {
+    color:black;
+    background:white;
+}
+
+.primary {
+    background: #673AB7;
+}
+
+.danger, .danger:active {
+    background: #F44336;
+}
+
+.warning {
+    background: #FFC107;
+}
+
+.good {
+    background: #4CAF50;
+}
+
+.paperButton:focus {
+    outline-width: 0;
+}
