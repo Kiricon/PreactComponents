@@ -1,3 +1,5 @@
+@import '../lib';
+
 .switchCheckbox {
   height: 0px;
   width: 0px;
@@ -26,18 +28,18 @@
 }
 
 .switchTrack.danger.on {
-  background: #F44336;
-  border: 2px solid #F44336;
+  background: $danger-color;
+  border: 2px solid $danger-color;
 }
 
 .switchTrack.warning.on {
-  background: #FFC107;
-  border: 2px solid #FFC107;
+  background: $warning-color;
+  border: 2px solid $warning-color;
 }
 
 .switchTrack.good.on {
-  background: #4CAF50;
-  border: 2px solid #4CAF50;
+  background: $good-color;
+  border: 2px solid $good-color;
 }
 
 .switchTrack.on .handle {

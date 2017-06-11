@@ -22,11 +22,13 @@ export default class Home extends Component {
 				<PaperButton content="good" good />
 				<PaperButton content="warning" warning />
 				<PaperButton content="danger" danger />
+				<br />
 				<PaperCheckBox style="padding: 10px;" checked />
 				<PaperCheckBox style="padding: 10px;" primary checked />
 				<PaperCheckBox style="padding: 10px;" good checked />
 				<PaperCheckBox style="padding: 10px;" warning checked />
 				<PaperCheckBox style="padding: 10px;" danger checked />
+				<br />
 				<SimpleSwitch style="padding: 10px;" primary />
 				<SimpleSwitch style="padding: 10px;" good />
 				<SimpleSwitch style="padding: 10px;" warning />

@@ -1,3 +1,5 @@
+@import '../lib';
+
 .papercheckboxContainer {
     display: inline-block;
 }
@@ -37,7 +39,7 @@
 
 
 .papercheckbox:checked + label.primary:before {
-  background: #673AB7;
+  background: $primary-color;
 }
 
 .papercheckbox:checked + label.normal:before {
@@ -45,15 +47,15 @@
 }
 
 .papercheckbox:checked + label.danger:before {
-    background: #F44336;
+    background: $danger-color;
 }
 
 .papercheckbox:checked + label.warning:before {
-    background: #FFC107;
+    background: $warning-color;
 }
 
 .papercheckbox:checked + label.good:before {
-    background: #4CAF50;
+    background: $good-color;
 }
 
 .papercheckbox:checked + label.normal:after {

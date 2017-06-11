@@ -1,3 +1,5 @@
+@import '../lib.scss';
+
 .paperButton {
     font-size: 1em;
     padding: 0.5em 1em;
@@ -19,19 +21,19 @@
 }
 
 .primary {
-    background: #673AB7;
+    background: $primary-color;
 }
 
 .danger, .danger:active {
-    background: #F44336;
+    background: $danger-color;
 }
 
 .warning {
-    background: #FFC107;
+    background: $warning-color;
 }
 
 .good {
-    background: #4CAF50;
+    background: $good-color;
 }
 
 .paperButton:focus {
