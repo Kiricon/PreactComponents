@@ -8,7 +8,7 @@ export default class AsyncImg extends Component {
      */
 	growBorder() {
 		let border = this.base.querySelector('div');
-		border.style.width = '99%';
+		border.style.width = 'calc(100% - 2px)';
 	}
 
     /**
@@ -25,10 +25,10 @@ export default class AsyncImg extends Component {
 			let input = this.base.querySelector('input');
 
 			if (input.value.trim() !== '' && input.value !== null) {
-				input.style.border = 'solid 1px green';
+				input.style.border = 'solid 1px #4CAF50';
 			}
 			else {
-				input.style.border = 'solid 1px red';
+				input.style.border = 'solid 1px #F44336';
 			}
 
 		}
