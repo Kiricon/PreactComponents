@@ -1,0 +1,41 @@
+.switchCheckbox {
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.switchTrack {
+  --simple-switch_size: 30px;
+  font-size: inherit;
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+  background: #ccc;
+  border-radius: 20px;
+  padding: 0 calc((20px * 1.25) - 10px) 0 0;
+  border: 3px solid #ccc;
+  transition: background 250ms ease-out;
+  outline: none;
+  box-sizing: padding-box;
+  cursor: pointer;
+}
+.switchTrack.on {
+  background: #f44336;
+  border: 3px solid #f44336;
+}
+.switchTrack.on .handle {
+  transform: translateX(calc((20px * 1.25) - 10px));
+}
+
+.switchTrack.focus {
+  border: 3px solid #03A9F4;
+}
+.switchTrack .handle {
+  width: calc(10px);
+  height: calc(10px);
+  border-radius: 20px;
+  background: #fff;
+  display: block;
+  transition: transform 250ms ease-out;
+}

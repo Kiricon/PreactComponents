@@ -5,6 +5,7 @@ import AsyncImg from './../../components/async-img';
 import { PaperInput, PaperEmailInput, PaperPasswordInput } from './../../components/paperinput';
 import PaperButton from './../../components/paperbutton';
 import PaperCheckBox from './../../components/papercheckbox';
+import SimpleSwitch from './../../components/switch';
 
 export default class Home extends Component {
 	render() {
@@ -26,6 +27,7 @@ export default class Home extends Component {
 				<PaperCheckBox style="padding: 10px;" good checked />
 				<PaperCheckBox style="padding: 10px;" warning checked />
 				<PaperCheckBox style="padding: 10px;" danger checked />
+				<SimpleSwitch style="padding: 10px;" />
 			</div>
 		);
 	}
